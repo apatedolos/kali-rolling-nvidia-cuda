@@ -8,7 +8,7 @@ cdimage.kali.org/kali-images/kali-weekly/
 
 kali-linux-2017-W06-amd64.iso
 
-Interestingly after the primary install, originally, I was able to boot into the GUI after the reboot but on testing this process again I had the clasic screen freeze after login. To get round this I used CTRL + ALT + F2 to get the tty and carried on the process.
+Interestingly after the primary install, originally, I was able to boot into the GUI after the reboot but on testing this process again I had the classic screen freeze after login. To get round this I used CTRL + ALT + F2 to get the tty and carried on the process.
 
 ### Then the usual lets get it all updated and start the funsies.
 
@@ -20,7 +20,7 @@ apt install -y linux-headers-$(uname -r)
 
 ### Bumblebeed Install
 
-I tried to test this again and ran into issues that were not present previously. I could not get the bumblebeed install to run so had to temp edit the grub boot config. on the end off the linux line add acpi=off and hit f10. I could then hit the gui and continue.
+I tried to test this again and ran into issues that were not present previously. I could not get the bumblebeed install to run so had to temp edit the grub boot config. On the end off the linux line add acpi=off and hit f10. I could then hit the gui and continue.
 
 apt install bumblebee-nvidia
 
@@ -113,6 +113,7 @@ You will see an error for device not found.
 vim /etc/OpenCL/vendors/mesa.icd 
 
 comment out the .so file
+
 ./cl-demo 1000000 10
 
 ### Install clinfo
