@@ -1,7 +1,5 @@
 # Kali-rolling with cuda 8 and OpenCl
 
-
-
 ### I have used the latest weekly build here:
 
 cdimage.kali.org/kali-images/kali-weekly/
@@ -9,6 +7,8 @@ cdimage.kali.org/kali-images/kali-weekly/
 ### I created the bootable of this iso
 
 kali-linux-2017-W06-amd64.iso
+
+Interestingly after the primary install, originally, I was able to boot into the GUI after the reboot but on testing this process again I had the clasic screen freeze after login. To get round this I used CTRL + ALT + F2 to get the tty and carried on the process.
 
 ### Then the usual lets get it all updated and start the funsies.
 
@@ -22,7 +22,9 @@ apt install -y linux-headers-$(uname -r)
 
 I tried to test this again and ran into issues that were not present previously. I could not get the bumblebeed install to run so had to temp edit the grub boot config. on the end off the linux line add acpi=off and hit f10. I could then hit the gui and continue.
 
-apt install bumblebee-nvidia 
+apt install bumblebee-nvidia
+
+After this I was able to reboot into the GUI as normal.
 
 ### Virtualgl install
 
