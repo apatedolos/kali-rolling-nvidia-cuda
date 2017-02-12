@@ -133,3 +133,51 @@ cd /opt/VirtualGL/bin/
 ./glxinfo
 
 glxinfo | grep -i "direct rendering"
+
+### CPyrit install
+
+As OpenCL is now installed a good addition is CPyrit
+
+### Add dependancies
+
+apt install libz-dev libssl-dev
+
+### Add pyrit from git
+
+git clone https://github.com/JPaulMora/Pyrit.git
+
+### Enter directory and build
+
+Do this step as the CPyrit modules need to be installed to be able to build CPyrit_OpenCL, the standard pyrit with Kali does not have to modules.
+
+cd Pyrit
+
+python setup.py build
+
+python setup.py install
+
+### Enter OpenCL directory and build NOTE# cpyrit_cuda wont build unless you use gcc 5, latest kali is version 6
+
+cd Pyrit/modules/cpyrit_opencl/
+
+python setup.py build
+
+python setup.py install
+
+### Benchmark before CPyrit enabled
+
+![alt text](screenshots/preOpenCL.png "Benchmark_pre")
+
+### Edit the config to disable CPU and enable OpenCL
+
+vim ~/.pyrit/config
+
+set:
+
+limit_ncpus = -1
+
+use_OpenCL = true
+
+### Benchmark after CPyrit enabled
+
+![alt text](screenshots/postOpenCL.png "Benchmark_post")
