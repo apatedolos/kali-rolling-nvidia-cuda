@@ -1,4 +1,4 @@
-# Kali-rolling with cuda 8 and OpenCl
+# Kali-rolling with cuda 8 and OpenCl/CPyrit
 
 ### I have used the latest weekly build here:
 
