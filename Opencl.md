@@ -99,6 +99,7 @@ make
 ### Get the opencl tools
 
 cd /
+
 curl https://codeload.github.com/hpc12/tools/tar.gz/master | tar xvfz -
 
 cd tools-master/
@@ -146,11 +147,12 @@ apt install -y libz-dev libssl-dev libpcap-dev
 ### Add pyrit from git
 
 cd /
+
 git clone https://github.com/JPaulMora/Pyrit.git
 
 ### Enter directory and build
 
-Do this step as the CPyrit modules need to be installed to be able to build CPyrit_OpenCL, the standard pyrit with Kali does not have to modules.
+Do this step as the CPyrit modules need to be installed to be able to build CPyrit_OpenCL, the standard pyrit with Kali does not have these modules.
 
 cd Pyrit
 
