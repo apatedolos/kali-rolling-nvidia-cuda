@@ -22,7 +22,7 @@ apt install -y linux-headers-$(uname -r)
 
 I tried to test this again and ran into issues that were not present previously. I could not get the bumblebeed install to run so had to temp edit the grub boot config. On the end off the linux line add acpi=off and hit f10. I could then hit the gui and continue.
 
-apt install bumblebee-nvidia
+apt install -y bumblebee-nvidia
 
 After this I was able to reboot into the GUI as normal.
 
@@ -56,7 +56,7 @@ chmod +x cuda_8.0.44_linux.run
 
 ### InstallUtils.pm needs this as perl5 doesn't include the current directory on Debian
 
-export PERL5LIB=. 
+export PERL5LIB=.
 
 ### Cuda Install
 
@@ -72,7 +72,7 @@ select defaults from there
 
 ### Install the Nvidia icd
 
-apt install nvidia-opencl-icd
+apt install -y nvidia-opencl-icd
 
 ### Now install the cuda driver
 
@@ -88,7 +88,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRAR
 
 ### Get the latest OpenCl
 
-apt install nvidia-opencl-dev 
+apt install -y nvidia-opencl-dev 
 
 cd /root/NVIDIA_CUDA-8.0_Samples/1_Utilities/deviceQuery
 
@@ -98,6 +98,7 @@ make
 
 ### Get the opencl tools
 
+cd /
 curl https://codeload.github.com/hpc12/tools/tar.gz/master | tar xvfz -
 
 cd tools-master/
@@ -118,7 +119,7 @@ comment out the .so file
 
 ### Install clinfo
 
-apt install clinfo
+apt install -y clinfo
 
 clinfo
 
@@ -140,10 +141,11 @@ As OpenCL is now installed a good addition is CPyrit
 
 ### Add dependancies
 
-apt install libz-dev libssl-dev
+apt install -y libz-dev libssl-dev libpcap-dev
 
 ### Add pyrit from git
 
+cd /
 git clone https://github.com/JPaulMora/Pyrit.git
 
 ### Enter directory and build
@@ -158,7 +160,7 @@ python setup.py install
 
 ### Enter OpenCL directory and build NOTE# cpyrit_cuda wont build unless you use gcc 5, latest kali is version 6
 
-cd Pyrit/modules/cpyrit_opencl/
+cd modules/cpyrit_opencl/
 
 python setup.py build
 
