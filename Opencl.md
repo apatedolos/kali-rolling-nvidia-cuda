@@ -8,7 +8,7 @@ cdimage.kali.org/kali-images/kali-weekly/
 
 kali-linux-2017-W06-amd64.iso
 
-Interestingly after the primary install, originally, I was able to boot into the GUI after the reboot but on testing this process again I had the classic screen freeze after login. To get round this I used CTRL + ALT + F2 to get the tty and carried on the process.
+Interestingly after the primary install, originally, I was able to boot into the GUI after the reboot but on testing this process again I had the classic screen freeze after login. To get round this I used CTRL + ALT + F2 to get the tty and carried on the process. NOTE: you will need to get to the tty as soon as the login appears, dont get distracted or this will freeze, requiring a reboot again!
 
 ### Then the usual lets get it all updated and start the funsies.
 
