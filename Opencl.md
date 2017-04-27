@@ -1,5 +1,7 @@
 # Kali-rolling with cuda 8 and OpenCl/CPyrit
 
+Tested working on kernels 4.8 through 4.9
+
 ### I have used the latest weekly build here:
 
 cdimage.kali.org/kali-images/kali-weekly/
