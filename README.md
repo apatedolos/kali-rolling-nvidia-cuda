@@ -1,5 +1,7 @@
 # kali-rolling-nvidia-cuda
 
+Tested working on kernels 4.8 through 4.9
+
 I have put this together after much pain of finding a good install path for my GTX960m and to use nvidia card with full cuda support. I have read many, many postings around this and work arounds that were in some cases not good solutions like disabling acpi! Some where far to bloated but all in some way aided me in the final setup of this which I hope helps some people.
 
 ### I have used the latest weekly build here:
